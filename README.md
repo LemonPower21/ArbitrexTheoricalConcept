@@ -1,34 +1,34 @@
-# 🔄 Crypto Arbitrage Scanner  (Arbitrex)
-Scanner in tempo reale per individuare opportunità di arbitraggio su più exchange utilizzando **CCXT**.
+# 🔄 Crypto Arbitrage Scanner  
+A real‑time arbitrage scanner that monitors multiple crypto exchanges using **CCXT**.
 
-## 📌 Descrizione  
-Questo script monitora il prezzo di una specifica coppia crypto (es. `DOGE/USDT`) su diversi exchange e rileva automaticamente eventuali opportunità di arbitraggio, confrontando **bid** e **ask** e applicando un buffer per coprire le fee.
+## 📌 Overview  
+This script continuously tracks the price of a selected trading pair (e.g., `DOGE/USDT`) across several exchanges and automatically detects arbitrage opportunities by comparing **bid** and **ask** prices. A configurable buffer helps account for trading fees and slippage.
 
-Ogni 5 secondi:
-- Recupera i prezzi da Binance, KuCoin, MEXC, Bybit e OKX  
-- Mostra bid/ask in tempo reale  
-- Identifica la miglior piattaforma per comprare e quella per vendere  
-- Calcola il potenziale profitto percentuale  
-- Evidenzia eventuali opportunità 🚀  
-
----
-
-## 🧩 Funzionalità principali
-- Monitoraggio continuo dei prezzi tramite CCXT  
-- Supporto multi-exchange  
-- Calcolo automatico dello spread  
-- Rilevamento opportunità di arbitraggio  
-- Output pulito e leggibile in console  
+Every 5 seconds the script:
+- Fetches prices from Binance, KuCoin, MEXC, Bybit, and OKX  
+- Displays bid/ask values in real time  
+- Identifies the best exchange to buy and the best to sell  
+- Calculates potential profit percentage  
+- Highlights any arbitrage opportunity 🚀  
 
 ---
 
-## 🛠️ Requisiti
-Assicurati di avere installato:
+## 🧩 Key Features
+- Real‑time price monitoring  
+- Multi‑exchange support  
+- Automatic spread calculation  
+- Arbitrage opportunity detection  
+- Clean and readable terminal output  
+
+---
+
+## 🛠️ Requirements
+Make sure you have:
 
 - **Python 3.8+**
-- **CCXT**
+- **CCXT library**
 
-Installa CCXT con:
+Install CCXT with:
 
 ```bash
 pip install ccxt
@@ -36,15 +36,15 @@ pip install ccxt
 
 ---
 
-## ▶️ Utilizzo
+## ▶️ How to Run
 
-Esegui lo script:
+Execute the script:
 
 ```bash
 python arbitrage.py
 ```
 
-Il terminale mostrerà qualcosa come:
+Example output:
 
 ```
 --- Monitoring DOGE/USDT ---
@@ -55,7 +55,7 @@ mexc       | Bid: 0.1232     | Ask: 0.1237
 Status: Scanning... No spread wide enough.
 ```
 
-Quando si presenta un’opportunità:
+When an opportunity appears:
 
 ```
 🚀 OPPORTUNITY FOUND!
@@ -66,28 +66,26 @@ PROFIT  : 0.4862%
 
 ---
 
-## ⚙️ Configurazione
+## ⚙️ Configuration
 
-Puoi modificare:
-
-### Coppia da monitorare
+### Trading pair
 ```python
 symbol = 'DOGE/USDT'
 ```
 
-### Lista degli exchange
+### Exchanges to monitor
 ```python
 exchange_ids = ['binance', 'kucoin', 'mexc', 'bybit', 'okx']
 ```
 
-### Margine di sicurezza per fee e slippage
+### Fee/slippage buffer
 ```python
 fee_buffer = 0.002  # 0.2%
 ```
 
 ---
 
-## 📄 Codice completo
+## 📄 Full Source Code
 
 ```python
 import ccxt
@@ -143,5 +141,5 @@ while True:
 ---
 
 ## ⚠️ Disclaimer  
-Questo script è solo a scopo educativo.  
-L’arbitraggio comporta rischi reali: fee, slippage, tempi di trasferimento, limiti API e liquidità possono annullare il profitto teorico.
+This script is for educational purposes only.  
+Real arbitrage involves risks: fees, slippage, transfer delays, API limits, and liquidity can eliminate theoretical profit.
