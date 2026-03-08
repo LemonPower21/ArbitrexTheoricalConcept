@@ -1,4 +1,4 @@
-# 🔄 Crypto Arbitrage Scanner  
+# 🔄 Crypto Arbitrage Scanner  (Arbitrex)
 A real‑time arbitrage scanner that monitors multiple crypto exchanges using **CCXT**.
 
 ## 📌 Overview  
